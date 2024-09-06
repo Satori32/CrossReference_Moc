@@ -3,6 +3,9 @@
 #include <memory>
 #include <string>
 
+//this is Thing Save Method Of Cross Reference.
+//i need strong Thing Save Method.
+
 struct Concept {
 	std::string C = "None";
 	std::string Text = "Some";
