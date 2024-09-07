@@ -44,6 +44,18 @@ bool WriteLocal(Local& L, std::string T) {
 	return true;
 }
 
+struct Dictionary  //stack the many consept.
+{
+	std::vector<SConcept> Elem;
+
+};
+
+bool Add(Dictionary& In, SConcept S) {
+	In.Elem.push_back(S);
+	return true;
+}
+
+
 int main() {
 	auto X = CreateConcept("名前", "一意性を得るためのアイデンティファィア");
 	Player A;
@@ -53,6 +65,9 @@ int main() {
 	B.L = Y;
 
 	WriteLocal(A.L, "私の名前はたこ焼き太郎だ。");
+
+	Dictionary D;
+	Add(D, X);
 
 	return 0;
 }
